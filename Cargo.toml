@@ -8,3 +8,15 @@ edition = "2018"
 
 [dependencies]
 wasmer-runtime = "0.16.0"
+redox-ecc = { git = "https://github.com/armfazh/redox-ecc.git" }
+
+[dev-dependencies]
+criterion = "0.5"
+
+[[bench]]
+name = "bench_wasm"
+harness = false
+
+[[bench]]
+name = "bench_x64"
+harness = false

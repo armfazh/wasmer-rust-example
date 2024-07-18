@@ -50,13 +50,16 @@ fn main() -> error::Result<()> {
             // name        // the func! macro autodetects the signature
             "print_str" => func!(print_str),
             // we can use closures here too
-            "print_str2" => func!(print_str2),
-            "increment_shared" => func!(increment_shared),
+            // "print_str2" => func!(print_str2),
+            // "increment_shared" => func!(increment_shared),
         },
     };
 
     // Compile our webassembly into an `Instance`.
     let instance = instantiate(WASM, &import_object)?;
+
+
+
 
     // Call our exported function!
     instance.call("hello_wasm", &[])?;

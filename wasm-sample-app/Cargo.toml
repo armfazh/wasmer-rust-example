@@ -10,5 +10,6 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
+redox-ecc = { git = "https://github.com/armfazh/redox-ecc.git" }
 
 
